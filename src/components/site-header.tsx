@@ -47,14 +47,14 @@ export function SiteHeader() {
     >
       <div
         className={cn(
-          "mx-auto flex w-full max-w-7xl items-center overflow-hidden gap-2 px-3 transition-all duration-200 ease-out sm:gap-4 sm:px-6 lg:px-8",
+          "mx-auto flex w-full max-w-7xl items-center gap-2 px-3 transition-all duration-200 ease-out sm:gap-4 sm:px-6 lg:px-8",
           scrolled ? "h-14 sm:h-16 md:h-20" : "h-16 sm:h-20 md:h-24",
         )}
       >
         <Link
           to="/"
           aria-label="Orchid Dry Cleaners & Launderette home"
-          className="flex h-full min-w-0 flex-1 items-center lg:flex-none"
+          className="flex h-full min-w-0 flex-1 items-center overflow-hidden lg:max-w-[16rem] lg:flex-none"
         >
           <OrchidLogo tone="light" compact={scrolled} fit="navbar" />
         </Link>
