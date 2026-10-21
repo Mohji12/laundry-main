@@ -26,13 +26,16 @@ export default defineConfig(async ({ command, mode }) => {
 
   if (command === "build") {
     const { nitro } = await import("nitro/vite");
+    const isVercel = Boolean(process.env.VERCEL);
     plugins.push(
-      nitro({
-        preset: "aws_amplify",
-        awsAmplify: {
-          runtime: "nodejs20.x",
-        },
-      }),
+      nitro(
+        isVercel
+          ? { preset: "vercel" }
+          : {
+              preset: "aws_amplify",
+              awsAmplify: { runtime: "nodejs20.x" },
+            },
+      ),
     );
   }
 
