@@ -69,7 +69,7 @@ export function OrchidLogo({
         className={cn(
           "w-auto max-w-full object-contain object-left transition-all duration-200",
           fit === "navbar"
-            ? "h-[320%] max-h-none w-auto max-w-none"
+            ? "h-[400%] max-h-none w-auto max-w-none"
             : cn(
                 "h-auto",
                 compact
